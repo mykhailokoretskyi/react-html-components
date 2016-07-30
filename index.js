@@ -1,3 +1,4 @@
 'use strict';
 
-export * as components from 'src/jsx';
+import Input from 'src/jsx/input';
+exports.Input = Input;
