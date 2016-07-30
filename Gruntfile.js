@@ -1,20 +1,24 @@
 'use strict';
 
-var grunt = require('grunt');
+module.exports = function(grunt){
 
-require("load-grunt-tasks")(grunt);
 
-grunt.initConfig({
-    "babel": {
-        options: {
-            sourceMap: true
-        },
-        dist: {
-            files: {
-                "dist/input.js": "src/jsx/*.jsx"
+    grunt.initConfig({
+        "babel": {
+            options: {
+                sourceMap: true
+            },
+            dist: {
+                files: {
+                    "dist/input.js": "src/jsx/input.jsx"
+                }
             }
-        }
-    }
-});
+        },
+        "jest": {}
+    });
 
-grunt.registerTask("default", ["babel"]);
+    grunt.loadNpmTasks('grunt-jest');
+    require("load-grunt-tasks")(grunt, { pattern: ['grunt-*', '!grunt-lib-*'] });
+    grunt.registerTask("default", ["babel"]);
+    grunt.registerTask("publish", ["jest", "babel"]);
+};
