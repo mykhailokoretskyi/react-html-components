@@ -1,4 +1,3 @@
 'use strict';
 
-import Input from 'src/jsx/input';
-exports.Input = Input;
+module.exports = require('./dist/input.js');

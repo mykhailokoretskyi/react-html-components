@@ -3,12 +3,8 @@
 import React from 'react';
 
 export class Input extends React.Component {
-    static displayName = "GenericInputElement";
-    static propTypes = {
-        required:    React.PropTypes.bool
-    };
     constructor(props){
-
+        super(props);
     }
     render(){
         return (
@@ -16,3 +12,8 @@ export class Input extends React.Component {
         );
     }
 }
+
+Input.displayName = "GenericInputElement";
+Input.propTypes = {
+    required:    React.PropTypes.bool
+};
