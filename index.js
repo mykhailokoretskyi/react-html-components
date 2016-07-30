@@ -1,3 +1,3 @@
 'use strict';
 
-export * from 'src/jsx';
+export * as components from 'src/jsx';
