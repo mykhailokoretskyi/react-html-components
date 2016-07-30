@@ -1,0 +1,25 @@
+{
+  "name": "react-html-components",
+  "version": "1.0.0",
+  "description": "Generic react html components for materializecss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mykhailokoretskyi/react-html-components.git"
+  },
+  "keywords": [
+    "react",
+    "html",
+    "components",
+    "materializecss"
+  ],
+  "author": "Mykhailo Koretskyi",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mykhailokoretskyi/react-html-components/issues"
+  },
+  "homepage": "https://github.com/mykhailokoretskyi/react-html-components"
+}
