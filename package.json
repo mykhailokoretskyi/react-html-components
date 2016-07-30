@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "grunt jest",
-    "postinstall": "grunt babel"
+    "prepublish": "grunt babel"
   },
   "repository": {
     "type": "git",
