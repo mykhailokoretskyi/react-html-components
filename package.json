@@ -1,11 +1,11 @@
 {
   "name": "react-html-components",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Generic react html components for materializecss",
   "main": "index.js",
   "scripts": {
-    "test": "grunt jest",
-    "prepublish": "grunt publish"
+    "test": "jest",
+    "prepublish": "jest && grunt"
   },
   "repository": {
     "type": "git",
@@ -33,16 +33,12 @@
     "babel-preset-react": "^6.11.1",
     "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
-    "grunt-jest": "^0.3.0",
     "jest": "^14.0.1",
-    "jest-cli": "^12.0.1",
-    "load-grunt-tasks": "^3.5.0"
+    "jest-cli": "^14.0.1",
+    "load-grunt-tasks": "^3.5.0",
+    "react-addons-test-utils": "^15.3.0"
   },
   "jest": {
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react/",
-      "<rootDir>/node_modules/react-dom/",
-      "<rootDir>/node_modules/react-addons-test-utils/"
-    ]
+    "automock": false
   }
 }

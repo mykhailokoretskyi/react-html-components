@@ -1,0 +1,23 @@
+exports[`Input changes the class when hovered 1`] = `
+<input
+  className="normal"
+  onMouseEnter={[Function bound _onMouseEnter]}
+  onMouseLeave={[Function bound _onMouseLeave]}
+  required={undefined} />
+`;
+
+exports[`Input changes the class when hovered 2`] = `
+<input
+  className="hovered"
+  onMouseEnter={[Function bound _onMouseEnter]}
+  onMouseLeave={[Function bound _onMouseLeave]}
+  required={undefined} />
+`;
+
+exports[`Input changes the class when hovered 3`] = `
+<input
+  className="normal"
+  onMouseEnter={[Function bound _onMouseEnter]}
+  onMouseLeave={[Function bound _onMouseLeave]}
+  required={undefined} />
+`;

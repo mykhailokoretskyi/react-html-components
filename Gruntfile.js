@@ -14,11 +14,8 @@ module.exports = function(grunt){
                 }
             }
         },
-        "jest": {}
     });
 
-    grunt.loadNpmTasks('grunt-jest');
     require("load-grunt-tasks")(grunt, { pattern: ['grunt-*', '!grunt-lib-*'] });
     grunt.registerTask("default", ["babel"]);
-    grunt.registerTask("publish", ["jest", "babel"]);
 };
