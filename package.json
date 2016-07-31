@@ -48,6 +48,7 @@
   },
   "jest": {
     "automock": false,
-    "collectCoverage": true
+    "collectCoverage": true,
+    "moduleFileExtensions": ["js", "jsx"]
   }
 }

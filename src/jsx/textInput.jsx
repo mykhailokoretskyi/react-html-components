@@ -1,8 +1,8 @@
 'use strict';
 
 import React from 'react';
-import BaseInputWrapper from './baseInputWrapper.jsx';
-import Input from './input.jsx';
+import BaseInputWrapper from './baseInputWrapper';
+import Input from './input';
 
 export default class TextInput extends BaseInputWrapper{
     constructor(props){
