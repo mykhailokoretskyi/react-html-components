@@ -3,7 +3,8 @@
 import React from 'react';
 
 const TYPES = [
-    'text'
+    'text',
+    'email'
 ];
 
 export default class Input extends React.Component {
@@ -42,6 +43,14 @@ export default class Input extends React.Component {
 
     _onMouseLeave(e) {
         this.props.mouseLeaveCallback();
+    }
+
+    value(v){
+        if (typeof v === 'undefined'){
+            return this.state.value;
+        } else {
+            this.setState({value: v});
+        }
     }
 
     render(){

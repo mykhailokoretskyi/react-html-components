@@ -1,0 +1,65 @@
+exports[`Input with listeners matches snapshot 1`] = `
+<div
+  className="input-field col s12">
+  <input
+    className="validate "
+    id="test"
+    name="test_input"
+    onChange={[Function bound _onChange]}
+    onMouseEnter={[Function bound _onMouseEnter]}
+    onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
+    type="email" />
+  <label
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test label"
+      }
+    }
+    htmlFor="test" />
+</div>
+`;
+
+exports[`Input with value matches snapshot 1`] = `
+<div
+  className="input-field col s12">
+  <input
+    className="validate "
+    id="test"
+    name="test_input"
+    onChange={[Function bound _onChange]}
+    onMouseEnter={[Function bound _onMouseEnter]}
+    onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
+    type="email" />
+  <label
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test label"
+      }
+    }
+    htmlFor="test" />
+</div>
+`;
+
+exports[`Input without listeners matches snapshot 1`] = `
+<div
+  className="input-field col s12">
+  <input
+    className="validate "
+    id="test"
+    name="test_input"
+    onChange={[Function bound _onChange]}
+    onMouseEnter={[Function bound _onMouseEnter]}
+    onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
+    type="email" />
+  <label
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test label"
+      }
+    }
+    htmlFor="test" />
+</div>
+`;

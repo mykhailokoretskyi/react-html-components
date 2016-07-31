@@ -15,6 +15,7 @@ describe('Input', () => {
             <Input required={true}
                    label="test label"
                    name="test_input"
+                   value="initial value"
                    id="test"
                    type="text"
                    changeCallback={change}
@@ -23,14 +24,9 @@ describe('Input', () => {
         );
     });
 
-    it('triggers change callback', () => {
-        let element = TestUtils.findRenderedDOMComponentWithTag(input, 'input');
-        TestUtils.Simulate.change(element, {target:{value:"Value"}});
-        expect(change).toBeCalled();
-    });
     it('doesnt trigger change callback', () => {
         let element = TestUtils.findRenderedDOMComponentWithTag(input, 'input');
-        TestUtils.Simulate.change(element, {target:{value:""}});
+        TestUtils.Simulate.change(element, {target:{value:"initial value"}});
         expect(change).not.toBeCalled();
     });
     it('triggers mouse enter callback', () => {
@@ -43,4 +39,17 @@ describe('Input', () => {
         TestUtils.Simulate.mouseLeave(element);
         expect(leave).toBeCalled();
     });
+    it('triggers change callback', () => {
+        let element = TestUtils.findRenderedDOMComponentWithTag(input, 'input');
+        TestUtils.Simulate.change(element, {target:{value:"Value"}});
+        expect(change).toBeCalled();
+    });
+    it("has accessor for value", () => {
+        expect(input.value()).toBe("initial value");
+    });
+    it("triggers change on value change", () => {
+        input.value("another value");
+        expect(change).toBeCalled();
+        expect(input.value()).toBe("another value");
+    })
 });
