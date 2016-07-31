@@ -4,12 +4,15 @@ import renderer from 'react/lib/ReactTestRenderer';
 
 const PasswordInputWithListeners = (
     <PasswordInput required={true}
-                label="test label"
-                name="test_input"
-                id="test"
-                changeCallback={function(){}}
-                mouseEnterCallback={function(){}}
-                mouseLeaveCallback={function(){}}/>
+                    label="test label"
+                    name="test_input"
+                    validate={true}
+                    errorMessage="wrong"
+                    successMessage="correct"
+                    id="test"
+                    changeCallback={function(){}}
+                    mouseEnterCallback={function(){}}
+                    mouseLeaveCallback={function(){}}/>
 );
 
 const PasswordInputWithoutListeners = (

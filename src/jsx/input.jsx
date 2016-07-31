@@ -55,7 +55,7 @@ export default class Input extends React.Component {
     }
 
     render(){
-        let classes = "validate " + this.props.extraClass;
+        let classes = (this.props.validate ? "validate " : "") + this.props.extraClass;
         return (
             <div className="input-field col s12">
                 <input placeholder={this.props.placeholder}
@@ -66,7 +66,10 @@ export default class Input extends React.Component {
                        onMouseEnter={this._onMouseEnter}
                        onMouseLeave={this._onMouseLeave}
                        className={classes}/>
-                    <label htmlFor={this.props.id} dangerouslySetInnerHTML={{__html: this.props.label}} />
+                    <label htmlFor={this.props.id}
+                           data-error={this.props.errorMessage}
+                           data-success={this.props.successMessage}
+                           dangerouslySetInnerHTML={{__html: this.props.label}} />
             </div>
         );
     }
@@ -75,6 +78,9 @@ export default class Input extends React.Component {
 Input.displayName = "GenericInputElement";
 Input.propTypes = {
     required:           React.PropTypes.bool,
+    validate:           React.PropTypes.bool,
+    errorMessage:       React.PropTypes.string,
+    successMessage:     React.PropTypes.string,
     value:              React.PropTypes.string,
     name:               React.PropTypes.string,
     label:              React.PropTypes.string,
@@ -88,6 +94,9 @@ Input.propTypes = {
 };
 Input.defaultProps = {
     required:           false,
+    validate:           false,
+    errorMessage:       '',
+    successMessage:     '',
     value:              '',
     name:               '',
     label:              '',

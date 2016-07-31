@@ -17,6 +17,9 @@ const textInputWithoutListeners = (
            label="test label"
            name="test_input"
            id="test"
+               validate={true}
+               errorMessage="wrong"
+               successMessage="correct"
            type="text"/>
 );
 

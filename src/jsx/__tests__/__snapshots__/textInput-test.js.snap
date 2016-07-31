@@ -2,7 +2,7 @@ exports[`Input with listeners matches snapshot 1`] = `
 <div
   className="input-field col s12">
   <input
-    className="validate "
+    className=""
     id="test"
     name="test_input"
     onChange={[Function bound _onChange]}
@@ -16,6 +16,8 @@ exports[`Input with listeners matches snapshot 1`] = `
         "__html": "test label"
       }
     }
+    data-error=""
+    data-success=""
     htmlFor="test" />
 </div>
 `;
@@ -24,7 +26,7 @@ exports[`Input with value matches snapshot 1`] = `
 <div
   className="input-field col s12">
   <input
-    className="validate "
+    className=""
     id="test"
     name="test_input"
     onChange={[Function bound _onChange]}
@@ -38,6 +40,8 @@ exports[`Input with value matches snapshot 1`] = `
         "__html": "test label"
       }
     }
+    data-error=""
+    data-success=""
     htmlFor="test" />
 </div>
 `;
@@ -60,6 +64,8 @@ exports[`Input without listeners matches snapshot 1`] = `
         "__html": "test label"
       }
     }
+    data-error="wrong"
+    data-success="correct"
     htmlFor="test" />
 </div>
 `;

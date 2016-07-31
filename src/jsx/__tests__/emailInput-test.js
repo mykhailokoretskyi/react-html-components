@@ -23,6 +23,9 @@ const emailInputWithValue = (
     <EmailInput label="test label"
                name="test_input"
                id="test"
+                validate={true}
+                errorMessage="wrong"
+                successMessage="correct"
                value="value"
                type="text"/>
 );
