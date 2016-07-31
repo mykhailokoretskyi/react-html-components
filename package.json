@@ -1,6 +1,6 @@
 {
   "name": "react-html-components",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "Generic react html components for materializecss",
   "main": "./lib/index.js",
   "files": [
@@ -49,6 +49,9 @@
   "jest": {
     "automock": false,
     "collectCoverage": true,
-    "moduleFileExtensions": ["js", "jsx"]
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ]
   }
 }
