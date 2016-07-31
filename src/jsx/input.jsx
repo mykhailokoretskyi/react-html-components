@@ -51,6 +51,7 @@ export default class Input extends React.Component {
                 <input placeholder={this.props.placeholder}
                        id={this.props.id}
                        type={this.props.type}
+                       name={this.props.name}
                        onChange={this._onChange}
                        onMouseEnter={this._onMouseEnter}
                        onMouseLeave={this._onMouseLeave}
@@ -65,6 +66,7 @@ Input.displayName = "GenericInputElement";
 Input.propTypes = {
     required:           React.PropTypes.bool,
     value:              React.PropTypes.string,
+    name:               React.PropTypes.string,
     label:              React.PropTypes.string,
     placeholder:        React.PropTypes.string,
     id:                 React.PropTypes.string,
@@ -77,6 +79,7 @@ Input.propTypes = {
 Input.defaultProps = {
     required:           false,
     value:              '',
+    name:               '',
     label:              '',
     placeholder:        '',
     id:                 '',
