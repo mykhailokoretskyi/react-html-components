@@ -1,0 +1,74 @@
+exports[`Checkbox with listeners matches snapshot 1`] = `
+<p>
+  <input
+    className="validate anotherClass"
+    disabled={false}
+    id="test"
+    name="test_input"
+    onChange={[Function bound _onChange]}
+    onMouseEnter={[Function bound _onMouseEnter]}
+    onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder="Checkbox"
+    required={true}
+    type="checkbox" />
+  <label
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test label"
+      }
+    }
+    data-error="wrong"
+    data-success="correct"
+    htmlFor="test" />
+</p>
+`;
+
+exports[`Checkbox with value matches snapshot 1`] = `
+<p>
+  <input
+    className=""
+    disabled={false}
+    id="test"
+    name="test_input"
+    onChange={[Function bound _onChange]}
+    onMouseEnter={[Function bound _onMouseEnter]}
+    onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
+    required={false}
+    type="checkbox" />
+  <label
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test label"
+      }
+    }
+    data-error=""
+    data-success=""
+    htmlFor="test" />
+</p>
+`;
+
+exports[`Checkbox without listeners matches snapshot 1`] = `
+<p>
+  <input
+    className=" filled-in"
+    disabled={false}
+    id="test"
+    name="test_input"
+    onChange={[Function bound _onChange]}
+    onMouseEnter={[Function bound _onMouseEnter]}
+    onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
+    required={true}
+    type="checkbox" />
+  <label
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test label"
+      }
+    }
+    data-error=""
+    data-success=""
+    htmlFor="test" />
+</p>
+`;

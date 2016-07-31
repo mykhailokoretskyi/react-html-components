@@ -6,7 +6,8 @@ const TYPES = [
     'text',
     'email',
     'password',
-    'radio'
+    'radio',
+    'checkbox'
 ];
 
 export default class Input extends React.Component {
@@ -14,7 +15,7 @@ export default class Input extends React.Component {
         let state = {};
         state.value = props.value;
 
-        if (props.type == 'radio')
+        if (props.type == 'radio' || props.type == 'checkbox')
             state.checked = props.checked;
 
         super(props);
@@ -28,8 +29,8 @@ export default class Input extends React.Component {
 
     componentDidUpdate(prevProps, prevState){
         if (
-            !this._isRadioButton() && this.state.value != prevState.value ||
-            this._isRadioButton() && (this.state.checked != prevState.checked)
+            !(this._isRadioButton() || this._isCheckbox()) && this.state.value != prevState.value ||
+            (this._isRadioButton() || this._isCheckbox()) && (this.state.checked != prevState.checked)
            ){
             this.props.changeCallback();
         }
@@ -39,7 +40,7 @@ export default class Input extends React.Component {
         let value = e.target.value;
         let checked = e.target.checked;
 
-        if (this._isRadioButton()){
+        if (this._isRadioButton() || this._isCheckbox()){
             if (checked == this.state.checked)
                 return;
         } else {
@@ -55,6 +56,10 @@ export default class Input extends React.Component {
 
     _isRadioButton(){
         return this.props.type == 'radio';
+    }
+
+    _isCheckbox(){
+        return this.props.type == 'checkbox';
     }
 
     _onMouseEnter(e) {
@@ -74,7 +79,7 @@ export default class Input extends React.Component {
     }
 
     checked(v){
-        if (!this._isRadioButton())
+        if (!(this._isRadioButton() || this._isCheckbox()))
             throw new Error("Input type '" + this.props.type + "' doesn't support 'checked'");
 
         if (typeof v === 'undefined'){
@@ -107,7 +112,7 @@ export default class Input extends React.Component {
         );
 
         let component;
-        if (this._isRadioButton()) {
+        if (this._isRadioButton() || this._isCheckbox()) {
             component = (
                 <p>
                     {input}

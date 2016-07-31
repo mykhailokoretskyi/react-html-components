@@ -6,7 +6,7 @@ import Input from './input';
 
 export default class RadioButton extends BaseInputWrapper{
     constructor(props){
-        super();
+        super(props);
     }
 
     render(){
