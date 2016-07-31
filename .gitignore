@@ -3,3 +3,4 @@
 /dist/*.js*.map
 /npm-debug.log
 /coverage/
+/lib/
