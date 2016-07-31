@@ -1,9 +1,5 @@
 'use strict';
 
-var elements = {
-    TextInput: require('./dist/textInput.jsx').default,
-    EmailInput: require('./dist/emailInput.jsx').default,
-    PasswordInput: require('./dist/passwordInput.jsx').default
-};
-
-module.exports = elements;
+export TextInput from './src/jsx/textInput';
+export EmailInput from './src/jsx/emailInput';
+export PasswordInput from './src/jsx/passwordInput';
