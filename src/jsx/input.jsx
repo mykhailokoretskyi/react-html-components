@@ -4,7 +4,8 @@ import React from 'react';
 
 const TYPES = [
     'text',
-    'email'
+    'email',
+    'password'
 ];
 
 export default class Input extends React.Component {
