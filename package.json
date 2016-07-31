@@ -3,10 +3,16 @@
   "version": "1.0.22",
   "description": "Generic react html components for materializecss",
   "main": "./lib/index.js",
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib"
+  ],
   "scripts": {
     "test": "jest",
     "prepublish": "jest",
-    "build": "babel -d lib --ignore __tests__,__mocks__ src"
+    "build": "babel -d lib --ignore __tests__,__mocks__ src",
+    "release": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
