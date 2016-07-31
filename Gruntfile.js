@@ -10,9 +10,10 @@ module.exports = function(grunt){
             },
             dist: {
                 files: {
-                    "dist/input.js":            "src/jsx/input.jsx",
-                    "dist/textInput.js":        "src/jsx/textInput.jsx",
-                    "dist/emailInput.js":       "src/jsx/emailInput.jsx"
+                    "dist/input.jsx":               "src/jsx/input.jsx",
+                    "dist/baseInputWrapper.jsx":    "src/jsx/baseInputWrapper.jsx",
+                    "dist/textInput.jsx":           "src/jsx/textInput.jsx",
+                    "dist/emailInput.jsx":          "src/jsx/emailInput.jsx"
                 }
             }
         },
