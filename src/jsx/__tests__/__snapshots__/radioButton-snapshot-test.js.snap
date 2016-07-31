@@ -1,43 +1,16 @@
-exports[`Input with listeners matches snapshot 1`] = `
-<div
-  className="input-field col s12">
+exports[`RadioButton with listeners matches snapshot 1`] = `
+<p>
   <input
-    className=""
+    className="validate anotherClass"
     disabled={false}
     id="test"
     name="test_input"
     onChange={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
+    placeholder="RadioButton"
     required={true}
-    type="email" />
-  <label
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "test label"
-      }
-    }
-    data-error=""
-    data-success=""
-    htmlFor="test" />
-</div>
-`;
-
-exports[`Input with value matches snapshot 1`] = `
-<div
-  className="input-field col s12">
-  <input
-    className="validate "
-    disabled={false}
-    id="test"
-    name="test_input"
-    onChange={[Function bound _onChange]}
-    onMouseEnter={[Function bound _onMouseEnter]}
-    onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
-    required={false}
-    type="email" />
+    type="radio" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -47,12 +20,36 @@ exports[`Input with value matches snapshot 1`] = `
     data-error="wrong"
     data-success="correct"
     htmlFor="test" />
-</div>
+</p>
 `;
 
-exports[`Input without listeners matches snapshot 1`] = `
-<div
-  className="input-field col s12">
+exports[`RadioButton with value matches snapshot 1`] = `
+<p>
+  <input
+    className=""
+    disabled={false}
+    id="test"
+    name="test_input"
+    onChange={[Function bound _onChange]}
+    onMouseEnter={[Function bound _onMouseEnter]}
+    onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
+    required={false}
+    type="radio" />
+  <label
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "test label"
+      }
+    }
+    data-error=""
+    data-success=""
+    htmlFor="test" />
+</p>
+`;
+
+exports[`RadioButton without listeners matches snapshot 1`] = `
+<p>
   <input
     className=""
     disabled={false}
@@ -63,7 +60,7 @@ exports[`Input without listeners matches snapshot 1`] = `
     onMouseLeave={[Function bound _onMouseLeave]}
     placeholder=""
     required={true}
-    type="email" />
+    type="radio" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -73,5 +70,5 @@ exports[`Input without listeners matches snapshot 1`] = `
     data-error=""
     data-success=""
     htmlFor="test" />
-</div>
+</p>
 `;

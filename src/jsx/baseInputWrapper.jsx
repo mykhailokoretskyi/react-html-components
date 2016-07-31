@@ -16,4 +16,8 @@ export default class BaseInputWrapper extends React.Component{
     value(v){
         return this.refs.input.value(v);
     }
+
+    checked(v){
+        return this.refs.input.checked(v);
+    }
 }

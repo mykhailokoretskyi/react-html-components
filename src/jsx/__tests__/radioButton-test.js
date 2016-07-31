@@ -1,8 +1,8 @@
 import React from 'react';
-import Input from '../input.jsx';
+import RadioButton from '../radioButton.jsx';
 import TestUtils from 'react-addons-test-utils';
 
-describe('Input', () => {
+describe('RadioButton', () => {
 
     var input, change, enter, leave;
 
@@ -12,12 +12,12 @@ describe('Input', () => {
         leave = jest.genMockFn();
 
         input = TestUtils.renderIntoDocument(
-            <Input required={true}
+            <RadioButton required={true}
                    label="test label"
                    name="test_input"
                    value="initial value"
+                         checked={true}
                    id="test"
-                   type="text"
                    changeCallback={change}
                    mouseEnterCallback={enter}
                    mouseLeaveCallback={leave}/>
@@ -26,7 +26,7 @@ describe('Input', () => {
 
     it('doesnt trigger change callback', () => {
         let element = TestUtils.findRenderedDOMComponentWithTag(input, 'input');
-        TestUtils.Simulate.change(element, {target:{value:"initial value"}});
+        TestUtils.Simulate.change(element, {target:{checked:true}});
         expect(change).not.toBeCalled();
     });
     it('triggers mouse enter callback', () => {
@@ -41,21 +41,15 @@ describe('Input', () => {
     });
     it('triggers change callback', () => {
         let element = TestUtils.findRenderedDOMComponentWithTag(input, 'input');
-        TestUtils.Simulate.change(element, {target:{value:"Value"}});
+        TestUtils.Simulate.change(element, {target:{checked:false}});
         expect(change).toBeCalled();
     });
-    it("has accessor for value", () => {
-        expect(input.value()).toBe("initial value");
+    it("has accessor for checked", () => {
+        expect(input.checked()).toBe(true);
     });
-    it("triggers change on value change", () => {
-        input.value("another value");
+    it("triggers change on state change", () => {
+        input.checked(false);
         expect(change).toBeCalled();
-        expect(input.value()).toBe("another value");
-    });
-
-    it('triggers exception if run checked on non radio inputs', () => {
-        expect(function () {
-            input.checked();
-        }).toThrow();
-    });
+        expect(input.checked()).toBe(false);
+    })
 });
