@@ -1,6 +1,6 @@
 {
   "name": "react-html-components",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Generic react html components for materializecss",
   "main": "index.js",
   "scripts": {
