@@ -1,5 +1,8 @@
 'use strict';
 
-module.exports.Input = require('./dist/input.js');
-module.exports.TextInput = require('./dist/textInput.js');
-module.exports.EmailInput = require('./dist/emailInput.js');
+var elements = {
+    TextInput: require('./dist/textInput.js'),
+    EmailInput: require('./dist/emailInput.js')
+};
+
+module.exports = elements;
