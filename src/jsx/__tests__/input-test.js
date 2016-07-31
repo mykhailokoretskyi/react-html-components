@@ -2,24 +2,50 @@ import React from 'react';
 import Input from '../input.jsx';
 import renderer from 'react/lib/ReactTestRenderer';
 
+const textInputWithListeners = (
+    <Input required={true}
+           label="test label"
+           name="test_input"
+           id="test"
+           type="text"
+           changeCallback={function(){}}
+           mouseEnterCallback={function(){}}
+           mouseLeaveCallback={function(){}}/>
+);
+
+const textInputWithoutListeners = (
+    <Input required={true}
+           label="test label"
+           name="test_input"
+           id="test"
+           type="text"/>
+);
+
+const textInputWithValue = (
+    <Input label="test label"
+           name="test_input"
+           id="test"
+           value="value"
+           type="text"/>
+);
+
 describe('Input', () => {
-    it('changes the class when hovered', () => {
-        const component = renderer.create(
-            <Input page="http://www.facebook.com"/>
-        );
+    it('with listeners matches snapshot', () => {
+        const component = renderer.create(textInputWithListeners);
+
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+    });
+    it('without listeners matches snapshot', () => {
+        const component = renderer.create(textInputWithoutListeners);
 
-        // manually trigger the callback
-        tree.props.onMouseEnter();
-        // re-rendering
-        tree = component.toJSON();
+        let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+    });
+    it('with value matches snapshot', () => {
+        const component = renderer.create(textInputWithValue);
 
-        // manually trigger the callback
-        tree.props.onMouseLeave();
-        // re-rendering
-        tree = component.toJSON();
+        let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
     });
 });

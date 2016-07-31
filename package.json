@@ -39,6 +39,7 @@
     "react-addons-test-utils": "^15.3.0"
   },
   "jest": {
-    "automock": false
+    "automock": false,
+    "collectCoverage": true
   }
 }
