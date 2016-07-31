@@ -29,6 +29,7 @@ const radioButtonWithValue = (
     <RadioButton label="test label"
            name="test_input"
            id="test"
+                 withGap={true}
                  checked={false}
            value="value"/>
 );

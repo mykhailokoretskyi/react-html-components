@@ -26,7 +26,7 @@ exports[`RadioButton with listeners matches snapshot 1`] = `
 exports[`RadioButton with value matches snapshot 1`] = `
 <p>
   <input
-    className=""
+    className=" with-gap"
     disabled={false}
     id="test"
     name="test_input"
