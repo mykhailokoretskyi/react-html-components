@@ -2,7 +2,7 @@
 
 import React from 'react';
 import BaseInputWrapper from './baseInputWrapper';
-import Input from './input';
+import InputInline from './inputInline';
 
 export default class RadioButton extends BaseInputWrapper{
     constructor(props){
@@ -13,7 +13,7 @@ export default class RadioButton extends BaseInputWrapper{
         let extraClass = this.props.extraClass || '';
         extraClass += this.props.withGap ? " with-gap" : "";
         return (
-            <Input {...this.props} extraClass={extraClass} type="radio" ref="input" />
+            <InputInline {...this.props} extraClass={extraClass} type="radio" ref="input" />
         );
     }
 }

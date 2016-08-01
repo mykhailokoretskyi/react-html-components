@@ -1,9 +1,9 @@
 import React from 'react';
-import Input from '../input.jsx';
+import InputBox from '../inputBox.jsx';
 import renderer from 'react/lib/ReactTestRenderer';
 
 const textInputWithListeners = (
-    <Input required={true}
+    <InputBox required={true}
            label="test label"
            name="test_input"
            id="test"
@@ -19,7 +19,7 @@ const textInputWithListeners = (
 );
 
 const textInputWithoutListeners = (
-    <Input required={true}
+    <InputBox required={true}
            label="test label"
            name="test_input"
            id="test"
@@ -27,7 +27,7 @@ const textInputWithoutListeners = (
 );
 
 const textInputWithValue = (
-    <Input label="test label"
+    <InputBox label="test label"
            name="test_input"
            id="test"
            value="value"

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import BaseInputWrapper from './baseInputWrapper';
-import Input from './input';
+import InputBox from './inputBox';
 
 export default class TextInput extends BaseInputWrapper{
     constructor(props){
@@ -11,7 +11,7 @@ export default class TextInput extends BaseInputWrapper{
 
     render(){
         return (
-            <Input {...this.props} type="text" ref="input" />
+            <InputBox {...this.props} type="text" ref="input" />
         );
     }
 }

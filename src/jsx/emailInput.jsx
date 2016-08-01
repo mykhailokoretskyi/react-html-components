@@ -2,16 +2,16 @@
 
 import React from 'react';
 import BaseInputWrapper from './baseInputWrapper';
-import Input from './input';
+import InputBox from './inputBox';
 
 export default class EmailInput extends BaseInputWrapper{
     constructor(props){
-        super();
+        super(props);
     }
 
     render(){
         return (
-            <Input {...this.props} type="email" ref="input" />
+            <InputBox {...this.props} type="email" ref="input" />
         );
     }
 }

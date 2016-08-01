@@ -92,7 +92,7 @@ export default class Input extends React.Component {
     render(){
         let classes = (this.props.validate ? "validate " : "") + this.props.extraClass;
 
-        const input = (
+        return (
             <input placeholder={this.props.placeholder}
                    id={this.props.id}
                    type={this.props.type}
@@ -104,31 +104,6 @@ export default class Input extends React.Component {
                    onMouseLeave={this._onMouseLeave}
                    className={classes}/>
         );
-        const label = (
-            <label htmlFor={this.props.id}
-                   data-error={this.props.errorMessage}
-                   data-success={this.props.successMessage}
-                   dangerouslySetInnerHTML={{__html: this.props.label}} />
-        );
-
-        let component;
-        if (this._isRadioButton() || this._isCheckbox()) {
-            component = (
-                <p>
-                    {input}
-                    {label}
-                </p>
-            );
-        } else {
-            component = (
-                <div className="input-field col s12">
-                    {input}
-                    {label}
-                </div>
-            );
-        }
-
-        return component;
     }
 }
 
@@ -137,11 +112,8 @@ Input.propTypes = {
     disabled:           React.PropTypes.bool,
     required:           React.PropTypes.bool,
     validate:           React.PropTypes.bool,
-    errorMessage:       React.PropTypes.string,
-    successMessage:     React.PropTypes.string,
     value:              React.PropTypes.string,
     name:               React.PropTypes.string,
-    label:              React.PropTypes.string,
     placeholder:        React.PropTypes.string,
     id:                 React.PropTypes.string,
     type:               React.PropTypes.oneOf(TYPES),
@@ -154,11 +126,8 @@ Input.defaultProps = {
     disabled:           false,
     required:           false,
     validate:           false,
-    errorMessage:       '',
-    successMessage:     '',
     value:              '',
     name:               '',
-    label:              '',
     placeholder:        '',
     id:                 '',
     type:               'text',

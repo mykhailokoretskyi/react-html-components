@@ -1,0 +1,68 @@
+exports[`Switch with listeners matches snapshot 1`] = `
+<div
+  className="switch">
+  <label>
+    Off
+    <input
+      className="validate anotherClass"
+      disabled={false}
+      id="test"
+      name="test_input"
+      onChange={[Function bound _onChange]}
+      onMouseEnter={[Function bound _onMouseEnter]}
+      onMouseLeave={[Function bound _onMouseLeave]}
+      placeholder="RadioButton"
+      required={true}
+      type="checkbox" />
+    <span
+      className="lever" />
+    On
+  </label>
+</div>
+`;
+
+exports[`Switch with value matches snapshot 1`] = `
+<div
+  className="switch">
+  <label>
+    Off
+    <input
+      className=""
+      disabled={false}
+      id="test"
+      name="test_input"
+      onChange={[Function bound _onChange]}
+      onMouseEnter={[Function bound _onMouseEnter]}
+      onMouseLeave={[Function bound _onMouseLeave]}
+      placeholder=""
+      required={false}
+      type="checkbox" />
+    <span
+      className="lever" />
+    On
+  </label>
+</div>
+`;
+
+exports[`Switch without listeners matches snapshot 1`] = `
+<div
+  className="switch">
+  <label>
+    Off
+    <input
+      className=""
+      disabled={false}
+      id="test"
+      name="test_input"
+      onChange={[Function bound _onChange]}
+      onMouseEnter={[Function bound _onMouseEnter]}
+      onMouseLeave={[Function bound _onMouseLeave]}
+      placeholder=""
+      required={true}
+      type="checkbox" />
+    <span
+      className="lever" />
+    On
+  </label>
+</div>
+`;

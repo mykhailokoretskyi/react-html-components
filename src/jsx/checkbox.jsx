@@ -2,7 +2,7 @@
 
 import React from 'react';
 import BaseInputWrapper from './baseInputWrapper';
-import Input from './input';
+import InputInline from './inputInline';
 
 export default class Checkbox extends BaseInputWrapper{
     constructor(props){
@@ -13,7 +13,7 @@ export default class Checkbox extends BaseInputWrapper{
         let extraClass = this.props.extraClass || '';
         extraClass += this.props.filledIn ? " filled-in" : "";
         return (
-            <Input {...this.props} extraClass={extraClass} type="checkbox" ref="input" />
+            <InputInline {...this.props} extraClass={extraClass} type="checkbox" ref="input" />
         );
     }
 }
