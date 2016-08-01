@@ -11,7 +11,7 @@ version](http://img.shields.io/npm/v/react-html-components.svg?style=flat)](http
 `npm install --save react-html-components`
 
 #### Usage
-`inport {TextInput, Switch} from 'react-html-components';`
+`import {TextInput, Switch} from 'react-html-components';`
 
 ### Supported materialize elements
 
