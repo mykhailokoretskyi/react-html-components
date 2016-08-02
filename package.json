@@ -41,8 +41,8 @@
     "babel-preset-stage-0": "^6.5.0",
     "grunt": "^1.0.1",
     "grunt-babel": "^6.0.0",
-    "jest": "^14.0.1",
-    "jest-cli": "^14.0.1",
+    "jest": "^14.1.0",
+    "jest-cli": "^14.1.0",
     "load-grunt-tasks": "^3.5.0",
     "react-addons-test-utils": "^15.3.0"
   },
