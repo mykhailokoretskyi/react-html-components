@@ -9,9 +9,6 @@ export default class InputBox extends BaseInputWrapper {
         let state = {};
         state.value = props.value;
 
-        if (props.type == 'radio' || props.type == 'checkbox')
-            state.checked = props.checked;
-
         super(props);
 
         this.state = state;
