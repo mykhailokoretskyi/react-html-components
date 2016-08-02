@@ -2,7 +2,7 @@
 
 import React from 'react';
 import BaseInputWrapper from './baseInputWrapper';
-import InputBox from './inputBox.jsx';
+import InputBox from './inputBox';
 
 export default class PasswordInput extends BaseInputWrapper{
     constructor(props){
