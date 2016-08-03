@@ -11,7 +11,8 @@ exports[`Input with listeners matches snapshot 1`] = `
     onMouseLeave={[Function bound _onMouseLeave]}
     placeholder="Input"
     required={true}
-    type="text" />
+    type="text"
+    value="" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -37,7 +38,8 @@ exports[`Input with value matches snapshot 1`] = `
     onMouseLeave={[Function bound _onMouseLeave]}
     placeholder=""
     required={false}
-    type="text" />
+    type="text"
+    value="value" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -63,7 +65,8 @@ exports[`Input without listeners matches snapshot 1`] = `
     onMouseLeave={[Function bound _onMouseLeave]}
     placeholder=""
     required={true}
-    type="text" />
+    type="text"
+    value="" />
   <label
     dangerouslySetInnerHTML={
       Object {

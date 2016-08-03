@@ -11,7 +11,6 @@ exports[`Switch with listeners matches snapshot 1`] = `
       onChange={[Function bound _onChange]}
       onMouseEnter={[Function bound _onMouseEnter]}
       onMouseLeave={[Function bound _onMouseLeave]}
-      placeholder="RadioButton"
       required={true}
       type="checkbox" />
     <span
@@ -27,6 +26,7 @@ exports[`Switch with value matches snapshot 1`] = `
   <label>
     Off
     <input
+      checked={false}
       className=""
       disabled={false}
       id="test"
@@ -34,7 +34,6 @@ exports[`Switch with value matches snapshot 1`] = `
       onChange={[Function bound _onChange]}
       onMouseEnter={[Function bound _onMouseEnter]}
       onMouseLeave={[Function bound _onMouseLeave]}
-      placeholder=""
       required={false}
       type="checkbox" />
     <span
@@ -50,6 +49,7 @@ exports[`Switch without listeners matches snapshot 1`] = `
   <label>
     Off
     <input
+      checked={true}
       className=""
       disabled={false}
       id="test"
@@ -57,7 +57,6 @@ exports[`Switch without listeners matches snapshot 1`] = `
       onChange={[Function bound _onChange]}
       onMouseEnter={[Function bound _onMouseEnter]}
       onMouseLeave={[Function bound _onMouseLeave]}
-      placeholder=""
       required={true}
       type="checkbox" />
     <span

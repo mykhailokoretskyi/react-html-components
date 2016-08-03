@@ -58,4 +58,21 @@ describe('Input', () => {
             input.checked();
         }).toThrow();
     });
+
+    it('triggers exception if init input with invalid type', () => {
+        expect(function () {
+            TestUtils.renderIntoDocument(
+                <Input required={true}
+                       label="test label"
+                       name="test_input"
+                       value="initial value"
+                       id="test"
+                       type="invalid"
+                       changeCallback={change}
+                       mouseEnterCallback={enter}
+                       mouseLeaveCallback={leave}/>
+            );
+        }).toThrow();
+        expect(input.getInputType("type")).toBe(undefined);
+    });
 });

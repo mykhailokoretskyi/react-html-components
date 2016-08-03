@@ -8,7 +8,6 @@ exports[`RadioButton with listeners matches snapshot 1`] = `
     onChange={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder="RadioButton"
     required={true}
     type="radio" />
   <label
@@ -26,6 +25,7 @@ exports[`RadioButton with listeners matches snapshot 1`] = `
 exports[`RadioButton with value matches snapshot 1`] = `
 <p>
   <input
+    checked={false}
     className=" with-gap"
     disabled={false}
     id="test"
@@ -33,7 +33,6 @@ exports[`RadioButton with value matches snapshot 1`] = `
     onChange={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
     required={false}
     type="radio" />
   <label
@@ -51,6 +50,7 @@ exports[`RadioButton with value matches snapshot 1`] = `
 exports[`RadioButton without listeners matches snapshot 1`] = `
 <p>
   <input
+    checked={true}
     className=""
     disabled={false}
     id="test"
@@ -58,7 +58,6 @@ exports[`RadioButton without listeners matches snapshot 1`] = `
     onChange={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
     required={true}
     type="radio" />
   <label

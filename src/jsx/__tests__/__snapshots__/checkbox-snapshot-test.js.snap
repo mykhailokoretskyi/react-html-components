@@ -8,7 +8,6 @@ exports[`Checkbox with listeners matches snapshot 1`] = `
     onChange={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder="Checkbox"
     required={true}
     type="checkbox" />
   <label
@@ -26,6 +25,7 @@ exports[`Checkbox with listeners matches snapshot 1`] = `
 exports[`Checkbox with value matches snapshot 1`] = `
 <p>
   <input
+    checked={false}
     className=""
     disabled={false}
     id="test"
@@ -33,7 +33,6 @@ exports[`Checkbox with value matches snapshot 1`] = `
     onChange={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
     required={false}
     type="checkbox" />
   <label
@@ -51,6 +50,7 @@ exports[`Checkbox with value matches snapshot 1`] = `
 exports[`Checkbox without listeners matches snapshot 1`] = `
 <p>
   <input
+    checked={true}
     className=" filled-in"
     disabled={false}
     id="test"
@@ -58,7 +58,6 @@ exports[`Checkbox without listeners matches snapshot 1`] = `
     onChange={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
     required={true}
     type="checkbox" />
   <label

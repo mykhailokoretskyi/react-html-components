@@ -1,65 +1,41 @@
 'use strict';
 
 import React from 'react';
+import _ from 'lodash';
+import BaseInput from './abstract/BaseInput';
 
-const TYPES = [
-    'text',
-    'email',
-    'password',
-    'radio',
-    'checkbox'
-];
-
-export default class Input extends React.Component {
+export default class Input extends BaseInput {
     constructor(props) {
-        let state = {};
-        state.value = props.value;
-
-        if (props.type == 'radio' || props.type == 'checkbox')
-            state.checked = props.checked;
-
         super(props);
+
+        const stateAttributes = this.getStateAttributes(props.type);
+        if(!stateAttributes.length){
+            throw new Error("Invalid 'type' attribute!");
+        }
+        this.state = _.pick(props, stateAttributes);
 
         this._onMouseEnter = this._onMouseEnter.bind(this);
         this._onMouseLeave = this._onMouseLeave.bind(this);
         this._onChange     = this._onChange.bind(this);
-
-        this.state = state;
     }
 
     componentDidUpdate(prevProps, prevState){
-        if (
-            !(this._isRadioButton() || this._isCheckbox()) && this.state.value != prevState.value ||
-            (this._isRadioButton() || this._isCheckbox()) && (this.state.checked != prevState.checked)
-           ){
+        const inputType = this.getInputType(this.state.type);
+        if (this.state[inputType] != prevState[inputType]){
             this.props.changeCallback();
         }
     }
 
     _onChange(e) {
-        let value = e.target.value;
-        let checked = e.target.checked;
+        const inputType = this.getInputType(this.state.type);
+        const stateValue = e.target[inputType];
 
-        if (this._isRadioButton() || this._isCheckbox()){
-            if (checked == this.state.checked)
-                return;
-        } else {
-            if (value == this.state.value)
-                return;
-        }
+        if(this.state[inputType] == stateValue)
+            return;
 
         this.setState({
-            value:      value,
-            checked:    checked
+            [inputType]: stateValue
         });
-    }
-
-    _isRadioButton(){
-        return this.props.type == 'radio';
-    }
-
-    _isCheckbox(){
-        return this.props.type == 'checkbox';
     }
 
     _onMouseEnter(e) {
@@ -71,6 +47,9 @@ export default class Input extends React.Component {
     }
 
     value(v){
+        if(typeof this.state.value === 'undefined')
+            throw new Error("Input type '" + this.props.type + "' doesn't support 'value'");
+
         if (typeof v === 'undefined'){
             return this.state.value;
         } else {
@@ -79,7 +58,7 @@ export default class Input extends React.Component {
     }
 
     checked(v){
-        if (!(this._isRadioButton() || this._isCheckbox()))
+        if (typeof this.state.checked === 'undefined')
             throw new Error("Input type '" + this.props.type + "' doesn't support 'checked'");
 
         if (typeof v === 'undefined'){
@@ -91,14 +70,12 @@ export default class Input extends React.Component {
 
     render(){
         let classes = (this.props.validate ? "validate " : "") + this.props.extraClass;
-
+        let props = _.pick(this.props, this.getAttributes(this.state.type));
         return (
-            <input placeholder={this.props.placeholder}
-                   id={this.props.id}
-                   type={this.props.type}
-                   disabled={this.props.disabled}
-                   required={this.props.required}
-                   name={this.props.name}
+            <input {...props}
+                   type={this.state.type}
+                   disabled={this.state.disabled}
+                   required={this.state.required}
                    onChange={this._onChange}
                    onMouseEnter={this._onMouseEnter}
                    onMouseLeave={this._onMouseLeave}
@@ -116,7 +93,7 @@ Input.propTypes = {
     name:               React.PropTypes.string,
     placeholder:        React.PropTypes.string,
     id:                 React.PropTypes.string,
-    type:               React.PropTypes.oneOf(TYPES),
+    type:               React.PropTypes.oneOf(_.keys(BaseInput.TYPES)),
     extraClass:         React.PropTypes.string,
     changeCallback:     React.PropTypes.func,
     mouseEnterCallback: React.PropTypes.func,
