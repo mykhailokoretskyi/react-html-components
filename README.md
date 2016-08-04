@@ -66,6 +66,8 @@ render(){
 );
 ```
 
+* * * * * * * *
+
 #### TextInput (`type="text"`)
 
 Supports *common* attributes.
@@ -75,6 +77,8 @@ Supports *common* attributes.
 * `placeholder`        - type `string`;
 * `label`              - type `string` (injected with `dangerouslySetInnerHTML`);
 
+* * * * * * * *
+
 #### PasswordInput (`type="password"`)
 
 Supports *common* attributes.
@@ -83,6 +87,8 @@ Supports *common* attributes.
 * `value`              - type `string`;
 * `placeholder`        - type `string`;
 * `label`              - type `string` (injected with `dangerouslySetInnerHTML`);
+
+* * * * * * * *
 
 #### EmailInput (`type="email"`)
 
@@ -95,3 +101,5 @@ Supports *common* attributes.
 * `validate`           - type `bool` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
 * `errorMessage`       - type `string` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
 * `successMessage`     - type `string` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
+
+* * * * * * * *
