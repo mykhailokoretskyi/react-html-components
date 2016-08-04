@@ -25,6 +25,8 @@ This package requires [materializecss](http://materializecss.com/, "Materialize 
   5. input type checkbox (**Checkbox**)
   6. switch (**Switch**)
 
+* * * * * * * *
+
 ## Documentation
 
 ### Form elements
@@ -34,15 +36,11 @@ This package requires [materializecss](http://materializecss.com/, "Materialize 
 * `disabled`           - type `boolean`;
 * `id`                 - type `string`;
 * `required`           - type `boolean`;
+* `extraClass`         - type `string` (is added to `class` attribute of `<input/>`);
+* `label`              - type `string` (injected with `dangerouslySetInnerHTML`);
 * `changeCallback`     - type `function` (executed when input changes value/checked);
 * `mouseEnterCallback` - type `function` (executed on hover of `<input/>`);
 * `mouseLeaveCallback` - type `function` (executed on mouse leave the `<input/>`);
-
-* `value`              - type `string`;
-* `validate`           - type `boolean` (enables materialize`s validation);
-* `errorMessage`       - type `string` (`data-error` attribute of `<input/>`);
-* `successMessage`     - type `string` (`data-success` attribute of `<input/>`);
-
 
 #### Methods
 
@@ -75,7 +73,6 @@ Supports *common* attributes.
 ##### Attributes
 * `value`              - type `string`;
 * `placeholder`        - type `string`;
-* `label`              - type `string` (injected with `dangerouslySetInnerHTML`);
 
 * * * * * * * *
 
@@ -86,7 +83,6 @@ Supports *common* attributes.
 ##### Attributes
 * `value`              - type `string`;
 * `placeholder`        - type `string`;
-* `label`              - type `string` (injected with `dangerouslySetInnerHTML`);
 
 * * * * * * * *
 
@@ -97,9 +93,27 @@ Supports *common* attributes.
 ##### Attributes
 * `value`              - type `string`;
 * `placeholder`        - type `string`;
-* `label`              - type `string` (injected with `dangerouslySetInnerHTML`);
 * `validate`           - type `bool` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
-* `errorMessage`       - type `string` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
-* `successMessage`     - type `string` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
+* `errorMessage`       - type `string` (`data-error` attribute of `<input/>`);
+* `successMessage`     - type `string` (`data-success` attribute of `<input/>`);
+
+* * * * * * * *
+
+#### Checkbox (`type="checkbox"`)
+
+Supports *common* attributes.
+
+##### Attributes
+* `checked`            - type `bool`;
+
+* * * * * * * *
+
+#### RadioButton (`type="radio"`)
+
+Supports *common* attributes.
+
+##### Attributes
+* `checked`            - type `bool`;
+* `withGap`            - type `bool` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
 
 * * * * * * * *
