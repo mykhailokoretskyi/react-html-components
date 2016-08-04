@@ -6,23 +6,18 @@ import Input from './input';
 
 export default class InputBox extends BaseInputWrapper {
     constructor(props) {
-        let state = {};
-        state.value = props.value;
-
         super(props);
-
-        this.state = state;
     }
 
     render(){
-        let {errorMessage, successMessage} = this.props;
+        let {errorMessage, successMessage, label} = this.props;
         return (
             <div className="input-field col s12">
                 <Input {...this.props} ref="input" />
                 <label htmlFor={this.props.id}
                        data-error={errorMessage}
                        data-success={successMessage}
-                       dangerouslySetInnerHTML={{__html: this.props.label}} />
+                       dangerouslySetInnerHTML={{__html: label}} />
             </div>
         );
     }

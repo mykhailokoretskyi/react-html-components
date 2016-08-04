@@ -6,7 +6,7 @@ import InputBox from './inputBox';
 
 export default class TextInput extends BaseInputWrapper{
     constructor(props){
-        super();
+        super(props);
     }
 
     render(){

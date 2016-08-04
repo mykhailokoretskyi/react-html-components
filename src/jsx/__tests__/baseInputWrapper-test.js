@@ -9,7 +9,9 @@ describe('BaseInputWrapper', () => {
 
     beforeEach(function(){
         valid = TestUtils.renderIntoDocument(
-            <ValidInputWrapper value="init"/>
+            <ValidInputWrapper value="init"
+                               disabled={false}
+                               required={true} />
         );
 
     });
@@ -22,5 +24,20 @@ describe('BaseInputWrapper', () => {
     });
     it("has accessor to value of an input", () => {
         expect(valid.value()).toBe("init");
+    });
+    it("has accessor for `required`", () => {
+        expect(valid.required()).toBe(true);
+        valid.required(false);
+        expect(valid.required()).toBe(false);
+    });
+
+    it("has accessor for `disabled`", () => {
+        expect(valid.disabled()).toBe(false);
+        valid.disabled(true);
+        expect(valid.disabled()).toBe(true);
+    });
+
+    it("has accessor for `type` attribute", () => {
+        expect(valid.type()).toBe("text");
     });
 });

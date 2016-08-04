@@ -13,6 +13,7 @@ describe('Input', () => {
 
         input = TestUtils.renderIntoDocument(
             <Input required={true}
+                   disabled={false}
                    label="test label"
                    name="test_input"
                    value="initial value"
@@ -74,5 +75,17 @@ describe('Input', () => {
             );
         }).toThrow();
         expect(input.getInputType("type")).toBe(undefined);
+    });
+
+    it("has accessor for `required`", () => {
+        expect(input.required()).toBe(true);
+        input.required(false);
+        expect(input.required()).toBe(false);
+    });
+
+    it("has accessor for `disabled`", () => {
+        expect(input.disabled()).toBe(false);
+        input.disabled(true);
+        expect(input.disabled()).toBe(true);
     });
 });

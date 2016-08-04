@@ -46,9 +46,25 @@ export default class Input extends BaseInput {
         this.props.mouseLeaveCallback();
     }
 
+    disabled(v){
+        if(typeof v === 'undefined'){
+            return this.state.disabled;
+        } else {
+            this.setState({disabled: v});
+        }
+    }
+
+    required(v){
+        if(typeof v === 'undefined'){
+            return this.state.required;
+        } else {
+            this.setState({required: v});
+        }
+    }
+
     value(v){
         if(typeof this.state.value === 'undefined')
-            throw new Error("Input type '" + this.props.type + "' doesn't support 'value'");
+            throw new Error("Input type '" + this.state.type + "' doesn't support 'value'");
 
         if (typeof v === 'undefined'){
             return this.state.value;
@@ -59,13 +75,17 @@ export default class Input extends BaseInput {
 
     checked(v){
         if (typeof this.state.checked === 'undefined')
-            throw new Error("Input type '" + this.props.type + "' doesn't support 'checked'");
+            throw new Error("Input type '" + this.state.type + "' doesn't support 'checked'");
 
         if (typeof v === 'undefined'){
             return this.state.checked;
         } else {
             this.setState({checked: v});
         }
+    }
+
+    type(){
+        return this.state.type;
     }
 
     render(){

@@ -4,7 +4,8 @@ import React from 'react';
 
 export default class BaseInputWrapper extends React.Component{
     constructor(props){
-        super();
+        super(props);
+
     }
 
     componentDidMount(prevProps, prevState){
@@ -19,5 +20,17 @@ export default class BaseInputWrapper extends React.Component{
 
     checked(v){
         return this.refs.input.checked(v);
+    }
+
+    required(v){
+        return this.refs.input.required(v);
+    }
+
+    disabled(v){
+        return this.refs.input.disabled(v);
+    }
+
+    type(){
+        return this.refs.input.type();
     }
 }

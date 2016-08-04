@@ -6,7 +6,7 @@ import BaseInputWrapper from '../baseInputWrapper.jsx';
 
 export default class ValidInputWrapper extends BaseInputWrapper{
     constructor(props){
-        super();
+        super(props);
     }
 
     render(){
