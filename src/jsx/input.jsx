@@ -90,7 +90,12 @@ export default class Input extends BaseInput {
 
     render(){
         let classes = (this.props.validate ? "validate " : "") + this.props.extraClass;
+        const states = this.getStateAttributes(this.state.type);
         let props = _.pick(this.props, this.getAttributes(this.state.type));
+        for (const attr in states){
+            if(typeof this.state[states[attr]] != 'undefined')
+                props[states[attr]] = this.state[states[attr]];
+        }
         return (
             <input {...props}
                    type={this.state.type}
