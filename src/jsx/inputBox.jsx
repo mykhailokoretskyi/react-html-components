@@ -24,7 +24,7 @@ export default class InputBox extends BaseInputWrapper {
 
     _onBlur(){
         this.setState({
-            active: !!this.refs.input.value()
+            active: !!(this.refs.input.value() || this.props.placeholder)
         });
     }
 
