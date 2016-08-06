@@ -11,16 +11,16 @@ export default class Switch extends BaseInputWrapper{
     }
 
     render(){
-        let on = this.props.onLabel;
-        let off = this.props.offLabel;
+        const { label, onLabel, offLabel, ...other } = this.props;
+        other.placeholder = '';
 
         return (
             <div className="switch">
                 <label>
-                    {off}
-                    <Input {...this.props} type="checkbox" ref="input"/>
+                    {offLabel}
+                    <Input {...other} type="checkbox" ref="input"/>
                     <span className="lever"/>
-                    {on}
+                    {onLabel}
                 </label>
             </div>
         );

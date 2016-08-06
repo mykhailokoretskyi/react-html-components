@@ -52,9 +52,4 @@ describe('RadioButton', () => {
         expect(change).toBeCalled();
         expect(input.checked()).toBe(false);
     });
-    it('triggers exception if run value on radio/checkbox inputs', () => {
-        expect(function () {
-            input.value();
-        }).toThrow();
-    });
 });

@@ -10,8 +10,10 @@ exports[`Checkbox with listeners matches snapshot 1`] = `
     onClick={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
     required={true}
-    type="checkbox" />
+    type="checkbox"
+    value="" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -36,8 +38,10 @@ exports[`Checkbox with value matches snapshot 1`] = `
     onClick={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
     required={false}
-    type="checkbox" />
+    type="checkbox"
+    value="value" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -62,8 +66,10 @@ exports[`Checkbox without listeners matches snapshot 1`] = `
     onClick={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
     required={true}
-    type="checkbox" />
+    type="checkbox"
+    value="" />
   <label
     dangerouslySetInnerHTML={
       Object {

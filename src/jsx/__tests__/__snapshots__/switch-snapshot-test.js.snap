@@ -13,8 +13,10 @@ exports[`Switch with listeners matches snapshot 1`] = `
       onClick={[Function bound _onChange]}
       onMouseEnter={[Function bound _onMouseEnter]}
       onMouseLeave={[Function bound _onMouseLeave]}
+      placeholder=""
       required={true}
-      type="checkbox" />
+      type="checkbox"
+      value="" />
     <span
       className="lever" />
     On
@@ -37,8 +39,10 @@ exports[`Switch with value matches snapshot 1`] = `
       onClick={[Function bound _onChange]}
       onMouseEnter={[Function bound _onMouseEnter]}
       onMouseLeave={[Function bound _onMouseLeave]}
+      placeholder=""
       required={false}
-      type="checkbox" />
+      type="checkbox"
+      value="value" />
     <span
       className="lever" />
     On
@@ -61,8 +65,10 @@ exports[`Switch without listeners matches snapshot 1`] = `
       onClick={[Function bound _onChange]}
       onMouseEnter={[Function bound _onMouseEnter]}
       onMouseLeave={[Function bound _onMouseLeave]}
+      placeholder=""
       required={true}
-      type="checkbox" />
+      type="checkbox"
+      value="" />
     <span
       className="lever" />
     On

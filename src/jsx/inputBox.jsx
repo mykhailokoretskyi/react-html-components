@@ -10,11 +10,11 @@ export default class InputBox extends BaseInputWrapper {
     }
 
     render(){
-        let {errorMessage, successMessage, label} = this.props;
+        let {errorMessage, successMessage, label, ...other} = this.props;
         return (
             <div className="input-field col s12">
-                <Input {...this.props} ref="input" />
-                <label htmlFor={this.props.id}
+                <Input {...other} ref="input" />
+                <label htmlFor={other.id}
                        data-error={errorMessage}
                        data-success={successMessage}
                        dangerouslySetInnerHTML={{__html: label}} />

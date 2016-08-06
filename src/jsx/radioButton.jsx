@@ -10,10 +10,11 @@ export default class RadioButton extends BaseInputWrapper{
     }
 
     render(){
-        let extraClass = this.props.extraClass || '';
-        extraClass += this.props.withGap ? " with-gap" : "";
+        const { withGap, ...other } = this.props;
+        other.extraClass = other.extraClass || '';
+        other.extraClass += withGap ? " with-gap" : "";
         return (
-            <InputInline {...this.props} extraClass={extraClass} type="radio" ref="input" />
+            <InputInline {...other} type="radio" ref="input" />
         );
     }
 }

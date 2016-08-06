@@ -10,10 +10,11 @@ export default class Checkbox extends BaseInputWrapper{
     }
 
     render(){
-        let extraClass = this.props.extraClass || '';
-        extraClass += this.props.filledIn ? " filled-in" : "";
+        const {filledIn, ...other} = this.props;
+        other.extraClass = other.extraClass || '';
+        other.extraClass += filledIn ? " filled-in" : "";
         return (
-            <InputInline {...this.props} extraClass={extraClass} type="checkbox" ref="input" />
+            <InputInline {...other} type="checkbox" ref="input" />
         );
     }
 }

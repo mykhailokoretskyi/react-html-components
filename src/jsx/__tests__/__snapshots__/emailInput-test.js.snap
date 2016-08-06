@@ -2,6 +2,7 @@ exports[`Input with listeners matches snapshot 1`] = `
 <div
   className="input-field col s12">
   <input
+    checked={false}
     className=""
     disabled={false}
     id="test"
@@ -30,6 +31,7 @@ exports[`Input with value matches snapshot 1`] = `
 <div
   className="input-field col s12">
   <input
+    checked={false}
     className="validate "
     disabled={false}
     id="test"
@@ -58,6 +60,7 @@ exports[`Input without listeners matches snapshot 1`] = `
 <div
   className="input-field col s12">
   <input
+    checked={false}
     className=""
     disabled={false}
     id="test"

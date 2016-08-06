@@ -10,12 +10,15 @@ export default class InputInline extends BaseInputWrapper{
     }
 
     render(){
+        const { label, errorMessage, successMessage, ...other } = this.props;
+        other.placeholder = '';
+
         return (
             <p>
-                <Input {...this.props} ref="input" />
-                <label dangerouslySetInnerHTML={{__html: this.props.label}}
-                       data-error={this.props.errorMessage}
-                       data-success={this.props.successMessage}
+                <Input {...other} ref="input" />
+                <label dangerouslySetInnerHTML={{__html: label}}
+                       data-error={errorMessage}
+                       data-success={successMessage}
                        htmlFor={this.props.id} />
             </p>
         );

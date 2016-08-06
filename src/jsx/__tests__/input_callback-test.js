@@ -54,29 +54,6 @@ describe('Input', () => {
         expect(input.value()).toBe("another value");
     });
 
-    it('triggers exception if run checked on non radio inputs', () => {
-        expect(function () {
-            input.checked();
-        }).toThrow();
-    });
-
-    it('triggers exception if init input with invalid type', () => {
-        expect(function () {
-            TestUtils.renderIntoDocument(
-                <Input required={true}
-                       label="test label"
-                       name="test_input"
-                       value="initial value"
-                       id="test"
-                       type="invalid"
-                       changeCallback={change}
-                       mouseEnterCallback={enter}
-                       mouseLeaveCallback={leave}/>
-            );
-        }).toThrow();
-        expect(input.getInputType("type")).toBe(undefined);
-    });
-
     it("has accessor for `required`", () => {
         expect(input.required()).toBe(true);
         input.required(false);

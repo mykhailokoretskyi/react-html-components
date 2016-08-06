@@ -10,8 +10,10 @@ exports[`RadioButton with listeners matches snapshot 1`] = `
     onClick={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
     required={true}
-    type="radio" />
+    type="radio"
+    value="" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -36,8 +38,10 @@ exports[`RadioButton with value matches snapshot 1`] = `
     onClick={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
     required={false}
-    type="radio" />
+    type="radio"
+    value="value" />
   <label
     dangerouslySetInnerHTML={
       Object {
@@ -62,8 +66,10 @@ exports[`RadioButton without listeners matches snapshot 1`] = `
     onClick={[Function bound _onChange]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
+    placeholder=""
     required={true}
-    type="radio" />
+    type="radio"
+    value="" />
   <label
     dangerouslySetInnerHTML={
       Object {
