@@ -102,6 +102,7 @@ export default class Input extends BaseInput {
                    disabled={this.state.disabled}
                    required={this.state.required}
                    onChange={this._onChange}
+                   onClick={this._onChange}
                    onMouseEnter={this._onMouseEnter}
                    onMouseLeave={this._onMouseLeave}
                    className={classes}/>
