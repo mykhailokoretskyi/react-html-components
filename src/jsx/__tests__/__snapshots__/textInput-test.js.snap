@@ -7,18 +7,14 @@ exports[`Input with listeners matches snapshot 1`] = `
     disabled={false}
     id="test"
     name="test_input"
-    onBlur={[Function bound _onBlur]}
     onChange={[Function bound _onChange]}
     onClick={[Function bound _onChange]}
-    onFocus={[Function bound _onFocus]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
     required={true}
     type="text"
     value="" />
   <label
-    className=""
     dangerouslySetInnerHTML={
       Object {
         "__html": "test label"
@@ -39,18 +35,14 @@ exports[`Input with value matches snapshot 1`] = `
     disabled={false}
     id="test"
     name="test_input"
-    onBlur={[Function bound _onBlur]}
     onChange={[Function bound _onChange]}
     onClick={[Function bound _onChange]}
-    onFocus={[Function bound _onFocus]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
     required={false}
     type="text"
     value="value" />
   <label
-    className="active"
     dangerouslySetInnerHTML={
       Object {
         "__html": "test label"
@@ -71,18 +63,14 @@ exports[`Input without listeners matches snapshot 1`] = `
     disabled={false}
     id="test"
     name="test_input"
-    onBlur={[Function bound _onBlur]}
     onChange={[Function bound _onChange]}
     onClick={[Function bound _onChange]}
-    onFocus={[Function bound _onFocus]}
     onMouseEnter={[Function bound _onMouseEnter]}
     onMouseLeave={[Function bound _onMouseLeave]}
-    placeholder=""
     required={true}
     type="text"
     value="" />
   <label
-    className=""
     dangerouslySetInnerHTML={
       Object {
         "__html": "test label"

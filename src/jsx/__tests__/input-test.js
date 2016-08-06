@@ -1,3 +1,4 @@
+jest.mock('react/lib/ReactDefaultInjection');
 import React from 'react';
 import InputBox from '../inputBox.jsx';
 import renderer from 'react/lib/ReactTestRenderer';

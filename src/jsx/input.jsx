@@ -104,8 +104,13 @@ export default class Input extends BaseInput {
             onLabel,
             blurCallback,
             focusCallback,
+            placeholder,
             ...other
             } = this.props;
+
+        if (placeholder){
+            other.placeholder = placeholder;
+        }
         let classes = (validate ? "validate " : "") + extraClass;
 
         return (
@@ -119,8 +124,6 @@ export default class Input extends BaseInput {
                    onClick={this._onChange}
                    onMouseEnter={this._onMouseEnter}
                    onMouseLeave={this._onMouseLeave}
-                   onBlur={blurCallback}
-                   onFocus={focusCallback}
                    className={classes}/>
         );
     }
@@ -140,9 +143,7 @@ Input.propTypes = {
     extraClass:         React.PropTypes.string,
     changeCallback:     React.PropTypes.func,
     mouseEnterCallback: React.PropTypes.func,
-    mouseLeaveCallback: React.PropTypes.func,
-    blurCallback:       React.PropTypes.func,
-    focusCallback:      React.PropTypes.func
+    mouseLeaveCallback: React.PropTypes.func
 };
 Input.defaultProps = {
     checked:            false,
@@ -157,7 +158,5 @@ Input.defaultProps = {
     extraClass:         '',
     changeCallback:     function(){},
     mouseEnterCallback: function(){},
-    mouseLeaveCallback: function(){},
-    blurCallback:       function(){},
-    focusCallback:      function(){}
+    mouseLeaveCallback: function(){}
 };
