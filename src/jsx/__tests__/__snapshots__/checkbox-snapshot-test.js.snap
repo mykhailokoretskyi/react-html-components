@@ -1,6 +1,7 @@
 exports[`Checkbox with listeners matches snapshot 1`] = `
 <p>
   <input
+    checked={false}
     className="validate anotherClass"
     disabled={false}
     id="test"

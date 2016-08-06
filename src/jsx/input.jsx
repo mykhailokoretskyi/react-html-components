@@ -112,6 +112,7 @@ export default class Input extends BaseInput {
 
 Input.displayName = "GenericInputElement";
 Input.propTypes = {
+    checked:            React.PropTypes.bool,
     disabled:           React.PropTypes.bool,
     required:           React.PropTypes.bool,
     validate:           React.PropTypes.bool,
@@ -126,6 +127,7 @@ Input.propTypes = {
     mouseLeaveCallback: React.PropTypes.func
 };
 Input.defaultProps = {
+    checked:            false,
     disabled:           false,
     required:           false,
     validate:           false,

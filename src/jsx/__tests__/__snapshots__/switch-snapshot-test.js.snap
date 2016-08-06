@@ -4,6 +4,7 @@ exports[`Switch with listeners matches snapshot 1`] = `
   <label>
     Off
     <input
+      checked={false}
       className="validate anotherClass"
       disabled={false}
       id="test"
