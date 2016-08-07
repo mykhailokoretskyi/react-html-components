@@ -1,0 +1,39 @@
+exports[`Icon large icon matches snapshot 1`] = `
+<i
+  className="some test classes material-icons large"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "test_icon"
+    }
+  } />
+`;
+
+exports[`Icon medium icon snapshot 1`] = `
+<i
+  className="some test classes material-icons medium"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "test_icon"
+    }
+  } />
+`;
+
+exports[`Icon small icon snapshot 1`] = `
+<i
+  className="some test classes material-icons small"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "test_icon"
+    }
+  } />
+`;
+
+exports[`Icon tiny icon snapshot 1`] = `
+<i
+  className="material-icons tiny"
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "test_icon"
+    }
+  } />
+`;

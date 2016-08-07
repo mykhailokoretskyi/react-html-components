@@ -12,3 +12,8 @@ export Button from './jsx/button/button';
 export LargeButton from './jsx/button/largeButton';
 export FlatButton from './jsx/button/flatButton';
 export FloatingButton from './jsx/button/floatingButton';
+export Icon from './jsx/icon/icon';
+export TinyIcon from './jsx/icon/tinyIcon';
+export SmallIcon from './jsx/icon/smallIcon';
+export MediumIcon from './jsx/icon/mediumIcon';
+export LargeIcon from './jsx/icon/largeIcon';
