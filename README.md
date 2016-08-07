@@ -24,6 +24,12 @@ This package requires [materializecss](http://materializecss.com/, "Materialize 
   4. input type radio (**RadioButton**)
   5. input type checkbox (**Checkbox**)
   6. switch (**Switch**)
+2. Icons
+  1. Icon
+  2. TinyIcon
+  3. SmallIcon
+  4. MediumIcon
+  5. LargeIcon
 2. Buttons
   1. Button
   2. LargeButton
@@ -116,6 +122,34 @@ Supports *common* attributes.
 
 ##### Attributes
 * `withGap`            - type `bool` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
+
+* * * * * * * *
+
+### Icons
+
+#### Icon - base icon component
+#### Attributes
+* `classes`            - type `Array` of css classes which will be concatenated with space;
+* `iconName`           - type `string` - reference to materializecss docs;
+* `size`               - type `string` (one of ["","tiny","small","medium","large"]);
+
+#### TinyIcon (type={"tiny"})
+#### SmallIcon (type={"small"})
+#### MediumIcon (type={"medium"})
+#### LargeIcon (type={"large"})
+
+*Example*:
+```
+import { SmallIcon } from 'react-html-components';
+
+.......
+
+render(){
+  return (
+    <SmallIcon classes={["left"]} iconName={"cloud"} />
+);
+
+```
 
 * * * * * * * *
 
