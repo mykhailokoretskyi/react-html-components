@@ -24,6 +24,7 @@ This package requires [materializecss](http://materializecss.com/, "Materialize 
   4. input type radio (**RadioButton**)
   5. input type checkbox (**Checkbox**)
   6. switch (**Switch**)
+2. Modal
 
 * * * * * * * *
 
@@ -32,6 +33,8 @@ This package requires [materializecss](http://materializecss.com/, "Materialize 
 ### Form elements
 
 #### Common attributes
+* `value`              - type `string`;
+* `checked`            - type `boolean`;
 * `name`               - type `string`;
 * `disabled`           - type `boolean`;
 * `id`                 - type `string`;
@@ -45,11 +48,11 @@ This package requires [materializecss](http://materializecss.com/, "Materialize 
 #### Methods
 
 Following accessor methods are available through the React\`s `refs`:
-* `value`              - getter/setter (available for all inputs **EXCEPT *RadioButton*, *Checkbox*, *Switch***);
-* `checked`            - getter/setter (available **ONLY** for *RadioButton*, *Checkbox*, *Switch*; throws an exception if called for other inputs);
-* `disabled`           - getter/setter (available for all inputs);
-* `required`           - getter/setter (available for all inputs);
-* `type`               - getter (available for all inputs);
+* `value`              - getter/setter;
+* `checked`            - getter/setter;
+* `disabled`           - getter/setter;
+* `required`           - getter/setter;
+* `type`               - getter;
 
 *Example*:
 ```
@@ -60,7 +63,7 @@ someMethod(){
 .......
 render(){
   return (
-    <TextInput ref="textInput" value={this.state.value} />
+    <TextInput ref="textInput" value="initial value" />
 );
 ```
 
@@ -71,7 +74,6 @@ render(){
 Supports *common* attributes.
 
 ##### Attributes
-* `value`              - type `string`;
 * `placeholder`        - type `string`;
 
 * * * * * * * *
@@ -81,7 +83,6 @@ Supports *common* attributes.
 Supports *common* attributes.
 
 ##### Attributes
-* `value`              - type `string`;
 * `placeholder`        - type `string`;
 
 * * * * * * * *
@@ -91,7 +92,6 @@ Supports *common* attributes.
 Supports *common* attributes.
 
 ##### Attributes
-* `value`              - type `string`;
 * `placeholder`        - type `string`;
 * `validate`           - type `bool` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
 * `errorMessage`       - type `string` (`data-error` attribute of `<input/>`);
@@ -103,9 +103,6 @@ Supports *common* attributes.
 
 Supports *common* attributes.
 
-##### Attributes
-* `checked`            - type `bool`;
-
 * * * * * * * *
 
 #### RadioButton (`type="radio"`)
@@ -113,7 +110,43 @@ Supports *common* attributes.
 Supports *common* attributes.
 
 ##### Attributes
-* `checked`            - type `bool`;
 * `withGap`            - type `bool` (reference [materializecss](http://materializecss.com/, "Materialize css framework") documentation);
+
+* * * * * * * *
+
+### Modal
+
+#### Attributes
+* `type`               - type `string` (default modal, if empty; `bottom-sheet`, `modal-fixed-footer`);
+
+#### Methods (available through `refs`)
+* `open`               - open modal;
+* `close`              - close modal;
+
+*Example*:
+```
+import { Modal, ModalContent, ModalFooter } from 'react-html-components';
+
+render(){
+  return (
+    <Modal ref="modal" type="bottom-sheet">
+      <ModelContent>
+        Content
+      </ModalContent>
+      <ModalFooter>
+        Footer content
+      </ModelFooter>
+    </Modal>
+);
+
+openModal(){
+  this.refs.modal.open();
+}
+
+closeModal(){
+  this.refs.modal.close();
+}
+
+```
 
 * * * * * * * *
