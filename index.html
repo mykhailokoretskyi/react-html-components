@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>React-html-components by mykhailokoretskyi</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>React-html-components</h1>
+        <p>Generic html react components for materializecss</p>
+
+        <p class="view"><a href="https://github.com/mykhailokoretskyi/react-html-components">View the Project on GitHub <small>mykhailokoretskyi/react-html-components</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/mykhailokoretskyi/react-html-components/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/mykhailokoretskyi/react-html-components/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/mykhailokoretskyi/react-html-components">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="react-html-components" class="anchor" href="#react-html-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>react-html-components</h1>
+
+<h2>
+<a id="generic-html-react-components-for-materializecss" class="anchor" href="#generic-html-react-components-for-materializecss" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generic html react components for materializecss</h2>
+
+<p><br>
+<a href="https://travis-ci.org/react-html-components/react-html-components"><img src="https://travis-ci.org/mykhailokoretskyi/react-html-components.svg?branch=master" alt="Build
+Status"></a> <a href="https://npmjs.org/package/react-html-components" title="View this project on npm"><img src="http://img.shields.io/npm/v/react-html-components.svg?style=flat" alt="npm
+version"></a></p>
+
+<h3>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting started</h3>
+
+<h4>
+<a id="install-npm-package" class="anchor" href="#install-npm-package" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install npm package</h4>
+
+<p><code>npm install --save react-html-components</code></p>
+
+<p>This package requires <a href="http://materializecss.com/," title="Materialize css framework">materializecss</a>.</p>
+
+<h4>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h4>
+
+<p><code>import {TextInput, Switch} from 'react-html-components';</code></p>
+
+<h3>
+<a id="currently-supported-materialize-elements" class="anchor" href="#currently-supported-materialize-elements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Currently supported materialize elements:</h3>
+
+<ol>
+<li>Form elements
+
+<ol>
+<li>input type text (<strong>TextInput</strong>)</li>
+<li>input type email (<strong>EmailInput</strong>)</li>
+<li>input type password (<strong>PasswordInput</strong>)</li>
+<li>input type radio (<strong>RadioButton</strong>)</li>
+<li>input type checkbox (<strong>Checkbox</strong>)</li>
+<li>switch (<strong>Switch</strong>)</li>
+</ol>
+</li>
+<li>Buttons
+
+<ol>
+<li>Button</li>
+<li>LargeButton</li>
+<li>FlatButton</li>
+<li>FloatingButton</li>
+</ol>
+</li>
+<li>Modal</li>
+</ol>
+
+<hr>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<h3>
+<a id="form-elements" class="anchor" href="#form-elements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Form elements</h3>
+
+<h4>
+<a id="common-attributes" class="anchor" href="#common-attributes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Common attributes</h4>
+
+<ul>
+<li>
+<code>value</code>              - type <code>string</code>;</li>
+<li>
+<code>checked</code>            - type <code>boolean</code>;</li>
+<li>
+<code>name</code>               - type <code>string</code>;</li>
+<li>
+<code>disabled</code>           - type <code>boolean</code>;</li>
+<li>
+<code>id</code>                 - type <code>string</code>;</li>
+<li>
+<code>required</code>           - type <code>boolean</code>;</li>
+<li>
+<code>extraClass</code>         - type <code>string</code> (is added to <code>class</code> attribute of <code>&lt;input/&gt;</code>);</li>
+<li>
+<code>label</code>              - type <code>string</code> (injected with <code>dangerouslySetInnerHTML</code>);</li>
+<li>
+<code>changeCallback</code>     - type <code>function</code> (executed when input changes value/checked);</li>
+<li>
+<code>mouseEnterCallback</code> - type <code>function</code> (executed on hover of <code>&lt;input/&gt;</code>);</li>
+<li>
+<code>mouseLeaveCallback</code> - type <code>function</code> (executed on mouse leave the <code>&lt;input/&gt;</code>);</li>
+</ul>
+
+<h4>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods</h4>
+
+<p>Following accessor methods are available through the React`s <code>refs</code>:</p>
+
+<ul>
+<li>
+<code>value</code>              - getter/setter;</li>
+<li>
+<code>checked</code>            - getter/setter;</li>
+<li>
+<code>disabled</code>           - getter/setter;</li>
+<li>
+<code>required</code>           - getter/setter;</li>
+<li>
+<code>type</code>               - getter;</li>
+</ul>
+
+<p><em>Example</em>:</p>
+
+<pre><code>someMethod(){
+  this.refs.textInput.value("new value"); // setter
+  this.refs.textInput.value()             // getter
+}
+.......
+render(){
+  return (
+    &lt;TextInput ref="textInput" value="initial value" /&gt;
+);
+</code></pre>
+
+<hr>
+
+<h4>
+<a id="textinput-typetext" class="anchor" href="#textinput-typetext" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TextInput (<code>type="text"</code>)</h4>
+
+<p>Supports <em>common</em> attributes.</p>
+
+<h5>
+<a id="attributes" class="anchor" href="#attributes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h5>
+
+<ul>
+<li>
+<code>placeholder</code>        - type <code>string</code>;</li>
+</ul>
+
+<hr>
+
+<h4>
+<a id="passwordinput-typepassword" class="anchor" href="#passwordinput-typepassword" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>PasswordInput (<code>type="password"</code>)</h4>
+
+<p>Supports <em>common</em> attributes.</p>
+
+<h5>
+<a id="attributes-1" class="anchor" href="#attributes-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h5>
+
+<ul>
+<li>
+<code>placeholder</code>        - type <code>string</code>;</li>
+</ul>
+
+<hr>
+
+<h4>
+<a id="emailinput-typeemail" class="anchor" href="#emailinput-typeemail" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EmailInput (<code>type="email"</code>)</h4>
+
+<p>Supports <em>common</em> attributes.</p>
+
+<h5>
+<a id="attributes-2" class="anchor" href="#attributes-2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h5>
+
+<ul>
+<li>
+<code>placeholder</code>        - type <code>string</code>;</li>
+<li>
+<code>validate</code>           - type <code>bool</code> (reference <a href="http://materializecss.com/," title="Materialize css framework">materializecss</a> documentation);</li>
+<li>
+<code>errorMessage</code>       - type <code>string</code> (<code>data-error</code> attribute of <code>&lt;input/&gt;</code>);</li>
+<li>
+<code>successMessage</code>     - type <code>string</code> (<code>data-success</code> attribute of <code>&lt;input/&gt;</code>);</li>
+</ul>
+
+<hr>
+
+<h4>
+<a id="checkbox-typecheckbox" class="anchor" href="#checkbox-typecheckbox" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Checkbox (<code>type="checkbox"</code>)</h4>
+
+<p>Supports <em>common</em> attributes.</p>
+
+<hr>
+
+<h4>
+<a id="radiobutton-typeradio" class="anchor" href="#radiobutton-typeradio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RadioButton (<code>type="radio"</code>)</h4>
+
+<p>Supports <em>common</em> attributes.</p>
+
+<h5>
+<a id="attributes-3" class="anchor" href="#attributes-3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h5>
+
+<ul>
+<li>
+<code>withGap</code>            - type <code>bool</code> (reference <a href="http://materializecss.com/," title="Materialize css framework">materializecss</a> documentation);</li>
+</ul>
+
+<hr>
+
+<h3>
+<a id="buttons" class="anchor" href="#buttons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Buttons</h3>
+
+<h4>
+<a id="button" class="anchor" href="#button" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Button</h4>
+
+<p><code>Button</code> - is a base component for buttons.</p>
+
+<h4>
+<a id="methods-available-through-refs" class="anchor" href="#methods-available-through-refs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods (available through <code>refs</code>)</h4>
+
+<ul>
+<li>
+<code>disabled</code>           - setter/getter;</li>
+</ul>
+
+<h4>
+<a id="attributes-4" class="anchor" href="#attributes-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
+
+<ul>
+<li>
+<code>classes</code>            - type <code>Array</code> of css classes which will be concatenated with space;</li>
+<li>
+<code>clickCallback</code>      - type <code>func</code> - will be triggered on click (is not triggered on disabled buttons);</li>
+<li>
+<code>disabled</code>           - type <code>bool</code>;</li>
+<li>
+<code>type</code>               - type oneOf(["", "btn-large", "btn-flat", "btn-floating"]) - should not be used normaly;</li>
+</ul>
+
+<h4>
+<a id="largebutton-button-typebtn-large" class="anchor" href="#largebutton-button-typebtn-large" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LargeButton (Button type={"btn-large"})</h4>
+
+<h4>
+<a id="flatbutton-button-typebtn-flat" class="anchor" href="#flatbutton-button-typebtn-flat" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FlatButton (Button type={"btn-flat"})</h4>
+
+<h4>
+<a id="floatingbutton-button-typebtn-floating" class="anchor" href="#floatingbutton-button-typebtn-floating" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FloatingButton (Button type={"btn-floating"})</h4>
+
+<p><em>Example</em>:</p>
+
+<pre><code>import { LargeButton } from 'react-html-components';
+
+.......
+
+render(){
+  return (
+    &lt;LargeButton disabled={true}&gt;Test Button&lt;/LargeButton&gt;
+);
+
+</code></pre>
+
+<hr>
+
+<h3>
+<a id="modal" class="anchor" href="#modal" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modal</h3>
+
+<h4>
+<a id="attributes-5" class="anchor" href="#attributes-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
+
+<ul>
+<li>
+<code>type</code>               - type <code>string</code> (default modal, if empty; <code>bottom-sheet</code>, <code>modal-fixed-footer</code>);</li>
+</ul>
+
+<h4>
+<a id="methods-available-through-refs-1" class="anchor" href="#methods-available-through-refs-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Methods (available through <code>refs</code>)</h4>
+
+<ul>
+<li>
+<code>open</code>               - open modal;</li>
+<li>
+<code>close</code>              - close modal;</li>
+</ul>
+
+<p><em>Example</em>:</p>
+
+<pre><code>import { Modal, ModalContent, ModalFooter, FlatButton } from 'react-html-components';
+
+render(){
+  return (
+    &lt;Modal ref="modal" type="bottom-sheet"&gt;
+      &lt;ModelContent&gt;
+        Content
+      &lt;/ModalContent&gt;
+      &lt;ModalFooter&gt;
+        &lt;FlatButton classes={["modal-action modal-close waves-effect waves-green"]}&gt;Agree&lt;/FlatButton&gt;
+      &lt;/ModelFooter&gt;
+    &lt;/Modal&gt;
+);
+
+openModal(){
+  this.refs.modal.open();
+}
+
+closeModal(){
+  this.refs.modal.close();
+}
+
+</code></pre>
+
+<hr>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/mykhailokoretskyi">mykhailokoretskyi</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
