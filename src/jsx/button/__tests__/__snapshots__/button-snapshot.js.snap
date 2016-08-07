@@ -1,0 +1,47 @@
+exports[`Button flat matches snapshot 1`] = `
+<a
+  className="some classes btn-flat"
+  onClick={[Function bound _onClick]}>
+  Flat
+</a>
+`;
+
+exports[`Button floating matches snapshot 1`] = `
+<a
+  className="some classes btn-floating"
+  onClick={[Function bound _onClick]}>
+  Floating
+</a>
+`;
+
+exports[`Button large matches snapshot 1`] = `
+<a
+  className="some classes btn-large"
+  onClick={[Function bound _onClick]}>
+  Large
+</a>
+`;
+
+exports[`Button regular button snapshot 1`] = `
+<a
+  className="btn"
+  onClick={[Function bound _onClick]}>
+  Test button
+</a>
+`;
+
+exports[`Button regular disabled 1`] = `
+<a
+  className="btn btn disabled"
+  onClick={[Function bound _onClick]}>
+  Test button
+</a>
+`;
+
+exports[`Button regular with classes 1`] = `
+<a
+  className="some classes btn"
+  onClick={[Function bound _onClick]}>
+  Test button
+</a>
+`;
