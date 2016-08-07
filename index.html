@@ -69,6 +69,16 @@ version"></a></p>
 <li>switch (<strong>Switch</strong>)</li>
 </ol>
 </li>
+<li>Icons
+
+<ol>
+<li>Icon</li>
+<li>TinyIcon</li>
+<li>SmallIcon</li>
+<li>MediumIcon</li>
+<li>LargeIcon</li>
+</ol>
+</li>
 <li>Buttons
 
 <ol>
@@ -224,6 +234,51 @@ render(){
 <hr>
 
 <h3>
+<a id="icons" class="anchor" href="#icons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Icons</h3>
+
+<h4>
+<a id="icon---base-icon-component" class="anchor" href="#icon---base-icon-component" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Icon - base icon component</h4>
+
+<h4>
+<a id="attributes-4" class="anchor" href="#attributes-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
+
+<ul>
+<li>
+<code>classes</code>            - type <code>Array</code> of css classes which will be concatenated with space;</li>
+<li>
+<code>iconName</code>           - type <code>string</code> - reference to materializecss docs;</li>
+<li>
+<code>size</code>               - type <code>string</code> (one of ["","tiny","small","medium","large"]);</li>
+</ul>
+
+<h4>
+<a id="tinyicon-typetiny" class="anchor" href="#tinyicon-typetiny" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>TinyIcon (type={"tiny"})</h4>
+
+<h4>
+<a id="smallicon-typesmall" class="anchor" href="#smallicon-typesmall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SmallIcon (type={"small"})</h4>
+
+<h4>
+<a id="mediumicon-typemedium" class="anchor" href="#mediumicon-typemedium" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>MediumIcon (type={"medium"})</h4>
+
+<h4>
+<a id="largeicon-typelarge" class="anchor" href="#largeicon-typelarge" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>LargeIcon (type={"large"})</h4>
+
+<p><em>Example</em>:</p>
+
+<pre><code>import { SmallIcon } from 'react-html-components';
+
+.......
+
+render(){
+  return (
+    &lt;SmallIcon classes={["left"]} iconName={"cloud"} /&gt;
+);
+
+</code></pre>
+
+<hr>
+
+<h3>
 <a id="buttons" class="anchor" href="#buttons" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Buttons</h3>
 
 <h4>
@@ -240,7 +295,7 @@ render(){
 </ul>
 
 <h4>
-<a id="attributes-4" class="anchor" href="#attributes-4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
+<a id="attributes-5" class="anchor" href="#attributes-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
 
 <ul>
 <li>
@@ -281,7 +336,7 @@ render(){
 <a id="modal" class="anchor" href="#modal" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Modal</h3>
 
 <h4>
-<a id="attributes-5" class="anchor" href="#attributes-5" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
+<a id="attributes-6" class="anchor" href="#attributes-6" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Attributes</h4>
 
 <ul>
 <li>
