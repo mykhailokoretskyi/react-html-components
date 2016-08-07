@@ -1,0 +1,41 @@
+exports[`Modal bottom sheet matches snapshot 1`] = `
+<div
+  className="modal bottom-sheet">
+  <div
+    className="modal-content">
+    This is a bottom sheet modal
+  </div>
+  <div
+    className="modal-footer">
+    With footer
+  </div>
+</div>
+`;
+
+exports[`Modal default matches snapshot 1`] = `
+<div
+  className="modal ">
+  <div
+    className="modal-content">
+    This is a default modal
+  </div>
+  <div
+    className="modal-footer">
+    With footer
+  </div>
+</div>
+`;
+
+exports[`Modal fixed footer matches snapshot 1`] = `
+<div
+  className="modal modal-fixed-footer">
+  <div
+    className="modal-content">
+    This is a modal
+  </div>
+  <div
+    className="modal-footer">
+    With fixed footer
+  </div>
+</div>
+`;
