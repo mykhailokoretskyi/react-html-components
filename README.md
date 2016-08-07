@@ -140,13 +140,13 @@ Supports *common* attributes.
 
 *Example*:
 ```
-import { ButtonLarge } from 'react-html-components';
+import { LargeButton } from 'react-html-components';
 
 .......
 
 render(){
   return (
-    <ButtonLarge disabled={true}>Test Button</ButtonLarge>
+    <LargeButton disabled={true}>Test Button</LargeButton>
 );
 
 ```
