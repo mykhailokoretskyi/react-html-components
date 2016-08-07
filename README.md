@@ -24,7 +24,12 @@ This package requires [materializecss](http://materializecss.com/, "Materialize 
   4. input type radio (**RadioButton**)
   5. input type checkbox (**Checkbox**)
   6. switch (**Switch**)
-2. Modal
+2. Buttons
+  1. Button
+  2. LargeButton
+  3. FlatButton
+  4. FloatingButton
+3. Modal
 
 * * * * * * * *
 
@@ -114,6 +119,40 @@ Supports *common* attributes.
 
 * * * * * * * *
 
+### Buttons
+
+#### Button
+`Button` - is a base component for buttons.
+
+#### Methods (available through `refs`)
+* `disabled`           - setter/getter;
+
+#### Attributes
+* `classes`            - type `Array` of css classes which will be concatenated with space;
+* `clickCallback`      - type `func` - will be triggered on click (is not triggered on disabled buttons);
+* `disabled`           - type `bool`;
+* `type`               - type oneOf(["", "btn-large", "btn-flat", "btn-floating"]) - should not be used normaly;
+
+
+#### LargeButton (Button type={"btn-large"})
+#### FlatButton (Button type={"btn-flat"})
+#### FloatingButton (Button type={"btn-floating"})
+
+*Example*:
+```
+import { ButtonLarge } from 'react-html-components';
+
+.......
+
+render(){
+  return (
+    <ButtonLarge disabled={true}>Test Button</ButtonLarge>
+);
+
+```
+
+* * * * * * * *
+
 ### Modal
 
 #### Attributes
@@ -125,7 +164,7 @@ Supports *common* attributes.
 
 *Example*:
 ```
-import { Modal, ModalContent, ModalFooter } from 'react-html-components';
+import { Modal, ModalContent, ModalFooter, FlatButton } from 'react-html-components';
 
 render(){
   return (
@@ -134,7 +173,7 @@ render(){
         Content
       </ModalContent>
       <ModalFooter>
-        Footer content
+        <FlatButton classes={["modal-action modal-close waves-effect waves-green"]}>Agree</FlatButton>
       </ModelFooter>
     </Modal>
 );
